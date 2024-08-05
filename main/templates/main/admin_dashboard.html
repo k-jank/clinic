@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .logout-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Logout Button -->
+        <div class="logout-btn">
+            <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+        </div>
+
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Selamat datang di Admin Dashboard!</h1>
+            <p class="lead">Kelola klinik Anda dengan mudah melalui berbagai fitur yang tersedia.</p>
+            <hr class="my-4">
+            <p>Pilih menu berikut untuk mulai bekerja:</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Manajemen Klinik</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Kelola Data Klinik</h5>
+                        <p class="card-text">Tambahkan, ubah, atau hapus data klinik dan informasi penting lainnya.</p>
+                        <a href="#" class="btn btn-light">Kelola Klinik</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-white bg-success mb-3">
+                    <div class="card-header">Manajemen Dokter</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Kelola Data Dokter</h5>
+                        <p class="card-text">Lihat dan atur jadwal, serta informasi dokter yang bekerja di klinik.</p>
+                        <a href="#" class="btn btn-light">Kelola Dokter</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-white bg-warning mb-3">
+                    <div class="card-header">Manajemen Pasien</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Kelola Data Pasien</h5>
+                        <p class="card-text">Lihat dan kelola informasi pasien, riwayat medis, dan janji temu.</p>
+                        <a href="#" class="btn btn-light">Kelola Pasien</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

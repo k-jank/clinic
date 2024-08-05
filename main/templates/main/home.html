@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Beranda Klinik</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}">Sistem Klinik</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'admin_page' %}">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dokter_page' %}">Dokter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pasien_page' %}">Pasien</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <div class="container text-center mt-5">
+        <h1 class="display-4">Selamat Datang di Sistem Klinik</h1>
+        <p class="lead">Kelola klinik Anda dengan mudah dan efisien</p>
+        <hr class="my-4">
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Admin</h5>
+                        <p class="card-text">Kelola data klinik dan administrasi.</p>
+                        <a href="{% url 'admin_page' %}" class="btn btn-primary">Masuk</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Dokter</h5>
+                        <p class="card-text">Kelola pasien dan jadwal.</p>
+                        <a href="{% url 'dokter_page' %}" class="btn btn-primary">Masuk</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Pasien</h5>
+                        <p class="card-text">Lihat jadwal dan riwayat medis.</p>
+                        <a href="{% url 'pasien_page' %}" class="btn btn-primary">Masuk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tambahkan Bootstrap JS dan dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
