@@ -6,7 +6,6 @@ class RegistrationForm(UserCreationForm):
     full_name = forms.CharField(max_length=100, required=True, label='Full Name')
     address = forms.CharField(widget=forms.Textarea, required=False, label='Address')
     contact = forms.CharField(max_length=15, required=False, label='Contact')
-    password_confirm = forms.CharField(widget=forms.PasswordInput, label='Confirm Password')
     role = forms.ChoiceField(choices=CustomUser.ROLE_CHOICES, label='Role')
 
     class Meta:
